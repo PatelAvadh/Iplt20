@@ -1,9 +1,9 @@
 import React from 'react'
-import './App.css';
+import './App.scss';
 import { TeamPage } from "./pages/TeamPage";
-import { Route} from 'react-router-dom';
-import { Routes} from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import { MatchPage } from './pages/MatchPage';
+import { HomePage } from './pages/HomePage';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Routes>
             <Route path='/teams/:teamName/matches/:year' element={<MatchPage />}></Route>
             <Route path='/teams/:teamName' element={<TeamPage />}></Route>
+            <Route path='/' element={<HomePage />}></Route>
         </Routes>
     </div>
   );
